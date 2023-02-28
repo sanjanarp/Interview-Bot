@@ -1,0 +1,13 @@
+{'know': 'know', 'time': 'time'}
+{'time is': 'time', 'know': 'know', 'human and': 'human'}
+{'human and': 'human', 'nlp': 'nlp', 'time is': 'time'}
+{'time is': 'time', 'know': 'know', 'human and': 'human', 'nlp': 'nlp'}
+{}{'time is': 'time', 'nlp': 'nlp', 'human and': 'human'}
+{'time is': 'i'}
+{'time is': 'time', 'nlp': 'nlp', 'human and': 'human'}
+{}
+{'perfectionism': 'i', 'lack of confidence': 'confid'}
+{}
+{'perfectionism': 'i'}
+{}
+{'lack of confidence': 'lack', 'perfectionism': 'perfection'}
