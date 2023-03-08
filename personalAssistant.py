@@ -10,9 +10,9 @@ import matchKeywords
 engine=pt.init('sapi5') 
 answer =""
 question =""
-sample_dataset = [    'perfectionism',    'procrastination',    'disorganization',    'lack of confidence',    'lack of communication skills',    'lack of flexibility',    'lack of leadership skills',    'lack of time management skills']
-
-
+sample_dataset = [ 'perfectionism','procrastination','disorganization','confidence','communication skills','flexibility','leadership','time management']
+#My weakness is that I procrastinate a lot
+   
 def assistant_speaking(speech):
     engine.say(speech) 
     engine.runAndWait() 
