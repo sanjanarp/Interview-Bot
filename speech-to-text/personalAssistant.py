@@ -61,7 +61,7 @@ if __name__=='__main__':
         assistant_speaking("how can I help you now?") 
         string ="how can I help you now?" 
         question = '{"question":"' + string +'"}'
-        with open("output.json", "a") as outfile:
+        with open("speech-to-text\output.json", "a") as outfile:
                    json.dump(question, outfile)
                    outfile.write('\n')
         statement = assistant_recognize_voice().lower()        
@@ -70,15 +70,15 @@ if __name__=='__main__':
             continue
         else:
             answer = '{"answer":"' + statement +'"}'
-            with open("output.json", "a") as outfile:
+            with open("speech-to-text\output.json", "a") as outfile:
                    json.dump(answer, outfile)
                    outfile.write('\n')
             extractedKeywords = matchKeywords.extract_keywords(statement)
-            with open("extracted_keywords.txt", "a") as outfile:
+            with open("speech-to-text\extracted_keywords.txt", "a") as outfile:
                    outfile.write(str(extractedKeywords))
                    outfile.write('\n')
             matchedKeywords = matchKeywords.match_keyword(extractedKeywords,sample_dataset)
-            with open("matched_keywords.txt", "a") as outfile:
+            with open("speech-to-text\matched_keywords.txt", "a") as outfile:
                    outfile.write(str(matchedKeywords))
                    outfile.write('\n')
             
@@ -87,7 +87,7 @@ if __name__=='__main__':
             string = 'Ok good bye see you later'
             assistant_speaking('Ok good bye see you later')
             question = '"question":"' + string +'"'
-            with open("output.json", "a") as outfile:
+            with open("speech-to-text\output.json", "a") as outfile:
                    json.dump(question, outfile)
                    outfile.write('\n')
             break
@@ -98,7 +98,7 @@ if __name__=='__main__':
             print(f"the time is {actualTime}")
             string = f"the time is {actualTime}"
             question = '{"question":"' + string +'"}'
-            with open("output.json", "a") as outfile:
+            with open("speech-to-text\output.json", "a") as outfile:
                    json.dump(question, outfile)
                    outfile.write('\n')
             
@@ -117,6 +117,6 @@ if __name__=='__main__':
             print(results)
             assistant_speaking(results)
             question = '{"question":"' + results +'"}'
-            with open("output.json", "a") as outfile:
+            with open("speech-to-text\output.json", "a") as outfile:
                    json.dump(question, outfile)
                    outfile.write('\n')

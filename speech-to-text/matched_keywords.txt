@@ -11,3 +11,4 @@
 {'perfectionism': 'i'}
 {}
 {'lack of confidence': 'lack', 'perfectionism': 'perfection'}
+{'time management': 'time'}
