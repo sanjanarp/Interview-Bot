@@ -61,7 +61,7 @@ def interview_bot():
         ]
     }
 
-    # Add these follow up questions to the list of questions below
+    # Add these follow up questions to the list of questions 
     questions = ["Let's start with your name."]
     
     # loop over each keyword, and build out question and potential followup questions
