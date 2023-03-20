@@ -1,0 +1,148 @@
+{
+    "rasa_nlu_data": {
+      "common_examples": [
+        {
+          "text": "Hi",
+          "intent": "greet",
+          "entities": []
+        },
+        {
+          "text": "Hello",
+          "intent": "greet",
+          "entities": []
+        },
+        {
+          "text": "Hey there",
+          "intent": "greet",
+          "entities": []
+        },
+        {
+          "text": "My name is John",
+          "intent": "get_name",
+          "entities": [
+            {
+              "start": 11,
+              "end": 15,
+              "value": "John",
+              "entity": "PERSON"
+            }
+          ]
+        },
+        {
+          "text": "You can call me Alice",
+          "intent": "get_name",
+          "entities": [
+            {
+              "start": 16,
+              "end": 21,
+              "value": "Alice",
+              "entity": "PERSON"
+            }
+          ]
+        },
+        {
+          "text": "This is XYZ Corp",
+          "intent": "get_name",
+          "entities": [
+            {
+              "start": 8,
+              "end": 15,
+              "value": "XYZ Corp",
+              "entity": "ORG"
+            }
+          ]
+        },
+        {
+          "text": "I have worked at ABC Company for 5 years",
+          "intent": "work_experience",
+          "entities": [
+            {
+              "start": 19,
+              "end": 31,
+              "value": "ABC Company",
+              "entity": "ORG"
+            },
+            {
+              "start": 37,
+              "end": 38,
+              "value": "5",
+              "entity": "number"
+            }
+          ]
+        },
+        {
+          "text": "One of my strengths is communication skills",
+          "intent": "strengths_and_weaknesses",
+          "entities": [
+            {
+              "start": 22,
+              "end": 42,
+              "value": "communication skills",
+              "entity": "SKILL"
+            }
+          ]
+        },
+        {
+          "text": "Sometimes I struggle with procrastination",
+          "intent": "strengths_and_weaknesses",
+          "entities": [
+            {
+              "start": 27,
+              "end": 41,
+              "value": "procrastination",
+              "entity": "PROBLEM"
+            }
+          ]
+        },
+        {
+          "text": "When I was leading a team at JKL Co., I had to...",
+          "intent": "leadership_example",
+          "entities": [
+            {
+              "start": 27,
+              "end": 34,
+              "value": "JKL Co.",
+              "entity": "ORG"
+            }
+          ]
+        },
+        {
+          "text": "I'm skilled in Python programming",
+          "intent": "other_skills",
+          "entities": [
+            {
+              "start": 17,
+              "end": 23,
+              "value": "Python",
+              "entity": "SKILL"
+            },
+            {
+              "start": 24,
+              "end": 36,
+              "value": "programming",
+              "entity": "SKILL"
+            }
+          ]
+        }
+      ],
+      "regex_features": [
+        {
+          "name": "PERSON",
+          "pattern": "[A-Z][a-z]*"
+        },
+        {
+          "name": "ORG",
+          "pattern": "[A-Z][a-z]+(?: [A-Z][a-z]+)*"
+        },
+        {
+          "name": "SKILL",
+          "pattern": "\\b(?:\\w+\\s)*\\w+\\b"
+        },
+        {
+          "name": "PROBLEM",
+          "pattern": "\\b(?:\\w+\\s)*\\w+\\b"
+        }
+      ]
+    }
+  }
+  
